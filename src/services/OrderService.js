@@ -56,7 +56,7 @@ const createOrder = (newOrder) => {
                     shippingPrice,
                     totalPrice,
                     user: user,
-                    isPaid, paidAt
+                    isPaid, paidAt,
                 })
                 if (createdOrder) {
                     // await EmailService.sendEmailCreateOrder(email,orderItems)

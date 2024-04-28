@@ -2,9 +2,9 @@ const ProductService = require ('../services/ProductService')
 
 const createProductController = async (req, res) => {
     try {
-        const { name, image, type, price, countInStock, rating, description,  discount} = req.body
+        const { name, image, type, price, countInStock, rating, description,  discount, author, publisher} = req.body
         console.log('databody', req.body)
-        if ( !name || !image || !type || !price || !countInStock || !rating || !description || !discount) {
+        if ( !name || !image || !type || !price || !countInStock || !rating || !description || !discount || !author || !publisher) {
             return res.status(200).json({
                 status: 'ERR',
                 message: 'The input is required'
